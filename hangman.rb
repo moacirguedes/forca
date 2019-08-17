@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'game.rb'
+
 words = []
 
 File.open('categories.txt') do |file|
