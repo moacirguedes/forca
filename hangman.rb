@@ -41,6 +41,7 @@ game = Game.new(words[user_number][rand(1..words[user_number].length - 1)])
 while game.ongoing
   system 'clear'
   puts game
-  puts 'Please insert one letter or a whole word to make a try'
   game.try(gets.chomp.upcase)
 end
+
+game.calculate_score

@@ -11,7 +11,7 @@ class Game
     @hit_last = false
     @ongoing = true
     @alphabet = %w[A B C D E F G H I J K
-                   L M N O P Q R S T U V W X Y Z]
+                   L M N O P Q R S T U V X W Y Z]
   end
 
   def to_s
@@ -21,6 +21,8 @@ class Game
       You still got those letters to try #{@alphabet}
 
       The secret word is #{@secret_word}  (#{@word.length} letters)
+
+      Please insert one letter or a whole word to make a try
 
     ENDTEXT
   end
@@ -83,5 +85,17 @@ class Game
   def end_game
     @ongoing = false
     puts "you lose with #{@attempts} attempts. The secret word was #{@word}"
+  end
+
+  def calculate_score
+    score_char = 100 / @word.length
+    half_word_size = @word.length / 2
+
+    total_score = if @word.length / @attempts >= 2
+                    100
+                  else
+                    100 - score_char * (@attempts - half_word_size)
+                  end
+    puts "yout score was #{total_score} out of 100"
   end
 end
