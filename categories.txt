@@ -1,0 +1,9 @@
+# hangcir game
+# please insert here some categories and for each one five (or more) words 
+# for composed words use underline as space
+# bellow some examples that you can use and edit, lines with # are ignored
+
+fruits potato apple banana kiwi pineapple
+car_brands ford fiat chevrolet citroen toyotta
+colors yellow blue green red black
+cities guarapuava curitiba maringa londrina florianopolis
